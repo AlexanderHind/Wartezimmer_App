@@ -1,0 +1,50 @@
+﻿@model Wartezimmer_App.Models.Patient
+
+@{
+    Layout = "_Layout";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Patientenaufnahme</title>
+</head>
+<body>
+    <form asp-action="PatientenAufnahme" method="post" class="m-2">
+        <div>
+            <label asp-for="Anrede" class="form-label">Anrede:</label>
+            <select asp-for="Anrede" class="form-control">
+                <option value="">Bitte auswählen:</option>
+                <option value="Frau">Frau</option>
+                <option value="Herr">Herr</option>
+            </select>
+        </div>
+        <div>
+            <label asp-for="Name" class="form-label">Vorname:</label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+        <div>
+            <label asp-for="Nachname" class="form-label">Nachname:</label>
+            <input asp-for="Nachname" class="form-control" />
+        </div>
+        <div>
+            <label asp-for="Wohnhaft" class="form-label">Adresse:</label>
+            <input asp-for="Wohnhaft" class="form-control" />
+        </div>
+        <div>
+            <label asp-for="Notfall" class="form-label">Notfall?</label>
+            <select asp-for="Notfall" class="form-control">
+                <option value="">Bitte auswählen:</option>
+                <option value="true">Ja</option>
+                <option value="false">Nein</option>
+            </select>
+        </div>
+        <div><br>
+            <div>
+                <input class="btn btn-primary" type="submit" value="Patient aufnehmen" />
+                <a class="btn btn-primary" asp-action="Index">Home</a>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿@model Wartezimmer_App.Models.Patient
+
+@{
+    Layout = "_Layout";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Patienteneinsicht</title>
+</head>
+<body>
+    <h2>Derzeitiger Patient</h2>
+    <table>
+        <thead>
+            <tr><th>Patientennummer</th><th>Anrede</th><th>Name</th><th>Nachname</th></tr><th>Notfall</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.PNr</td>
+                <td>@Model.Anrede</td>
+                <td>@Model.Name</td>
+                <td>@Model.Nachname</td>
+                <td>@Model.Notfall</td>
+            </tr>
+            <a asp-action="PatientenEinsicht"><button class="btn btn-primary">Nächster Patient</button></a>
+            <a asp-action="Index"><button class="btn btn-primary">Index</button></a>
+        </tbody>
+    </table>
+</body>
+</html>

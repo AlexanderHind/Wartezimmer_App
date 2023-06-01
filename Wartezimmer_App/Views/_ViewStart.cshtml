@@ -1,0 +1,143 @@
+﻿@{
+    Layout = "_Layout";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Website Layout
+    </title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* CSS property for header section */
+        .header {
+            width: 100%;
+            background-color: lightcoral;
+            color: grey;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* CSS property for navigation menu */
+        .nav_menu {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+            .nav_menu a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                .nav_menu a:hover {
+                    background-color: white;
+                    color: grey;
+                }
+
+        /* CSS property for content section */
+        .columnA, .columnB {
+            float: left;
+            width: 31%;
+            padding: 15px;
+            text-align: justify;
+        }
+
+        .h2 {
+            text-align: center;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 310px;
+            right: 310px;
+            margin: auto;
+            background-color: white;
+            color: lightcoral;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .form-control {
+            background-color: lightgray;
+        }
+
+        .label {
+            background-color: lightgray;
+            color: white;
+            padding: 8px;
+        }
+
+        .table {
+            padding: 50px;
+            background-color: lightgray;
+            color: black;
+            border-spacing: 10px;
+            border-color: black;
+        }
+
+        .btn-primary {
+            background-color: lightcoral;
+            color: white;
+            border-color: white;
+        }
+
+            .btn-primary:hover {
+                background-color: white;
+                color: lightcoral;
+                border-color: lightcoral;
+            }
+        /* unvisited link */
+        a:link {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* visited link */
+        a:visited {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: lightgray;
+            text-decoration: none;
+        }
+
+        /* selected link */
+        a:active {
+            color: lightgoldenrodyellow;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- header of website layout -->
+        <div class="header">
+            <h2 style="color:white;font-size:200%">
+                <a asp-action="Index">Patientenmanager 3000</a>
+            </h2>
+        </div>
+
+        <!-- navigation menu of website layout -->
+        <div class="nav_menu">
+            <a asp-action="PatientenAufnahme">Patientenaufnahme</a>
+            <a asp-action="PatientenEinsicht">Patienteneinsicht</a>
+        </div>
+    </header>
+    <footer>
+        <div class="footer">
+            Patientenmanager 3000&copy; ist eine Software von Alexander Hindenburg, Alexander Wolff und Martin Gründer
+        </div>
+    </footer>
+</body>
+</html>
